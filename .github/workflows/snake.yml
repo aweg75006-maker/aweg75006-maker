@@ -19,19 +19,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate snake
-        uses: Platane/snk/svg-only@v3
+      - name: Generate snake (GIF + SVG)
+        uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            github-snake.svg
-            github-snake-dark.svg?palette=github-dark
+            dist/github-snake.gif
+            dist/github-snake-dark.gif?palette=github-dark&color_snake=rgba(9,156,65,1)&color_dots=#eee,#A5F3C4,#2EA043,#1B6E28
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
 
       - name: Deploy to output branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./dist
           publish_branch: output
           commit_message: "Update snake animation [skip ci]"
           allow_empty_commit: true
