@@ -1,0 +1,38 @@
+name: GitHub Snake Readme Workflow
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # 每天 UTC 0 点自动更新
+  workflow_dispatch:       # 允许在 Actions 页面手动触发
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write          # 关键：否则会 403 Permission denied
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            github-snake.svg
+            github-snake-dark.svg?palette=github-dark
+
+      - name: Deploy to output branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: output
+          commit_message: "Update snake animation [skip ci]"
+          allow_empty_commit: true
+          force_orphan: true
