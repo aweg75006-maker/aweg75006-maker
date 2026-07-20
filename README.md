@@ -4,7 +4,15 @@
   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=2000&color=2EA043&center=true&vCenter=true&width=700&lines=Absolute+trainer+to+light+up;AI+agents" alt="Typing SVG" /></a>
 </div>
 
-<h3 align="left">Languages and Tools:</h3>
+## About Me
+
+I'm a **Master's student in Communication Engineering**, supervised by **Prof. Xin Wang**.
+
+My research interests lie at the intersection of **Large Language Models**, **Multimodal AI**, and **Agentic Systems**.
+
+---
+
+## Languages and Tools
 <p align="left">
 
   <a href="https://www.java.com" target="_blank" rel="noreferrer">
