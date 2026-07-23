@@ -12,6 +12,7 @@ My research interests lie at the intersection of **Large Language Models**, **Mu
 
 ---
 
+<!--
 ## My 3D Avatar
 
 <div align="center">
@@ -21,6 +22,7 @@ My research interests lie at the intersection of **Large Language Models**, **Mu
     <img width="320" alt="3D Avatar" src="https://cdn.jsdelivr.net/gh/aweg75006-maker/aweg75006-maker@main/assets/github-avatar-light.gif" />
   </picture>
 </div>
+-->
 
 ---
 
