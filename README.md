@@ -24,8 +24,6 @@ My research interests lie at the intersection of **Large Language Models**, **Mu
 </div>
 -->
 
----
-
 ## Languages and Tools
 <p align="left">
 
